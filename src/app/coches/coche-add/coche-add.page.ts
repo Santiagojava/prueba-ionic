@@ -18,7 +18,7 @@ export class CocheAddPage implements OnInit {
   ngOnInit() {
   }
 
-  NewCoche(nombre: HTMLInputElement, imageURL: HTMLInputElement){
+  NewCoche(nombre, imageURL){
     console.log(nombre.value);
     this.coche.nombre = nombre.value;
     this.coche.imageURL = imageURL.value;
