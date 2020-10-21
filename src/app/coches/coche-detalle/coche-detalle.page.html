@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/coches">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-input required type="text" placeholder="nombre vehiculo" [(ngModel)]="coche.nombre">
+    </ion-input>  
+      <ion-buttons slot="end">
+      <ion-button (click)="deleteCoche()">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col class="ion-no-padding">
+        <ion-img [src]="coche?.imageURL"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-item-divider></ion-item-divider>
+  <ion-button expand="full" (click)="guardarCoche()">Guardar Cambios
+  </ion-button>
+</ion-content>
+
+<app-ejemplo></app-ejemplo>

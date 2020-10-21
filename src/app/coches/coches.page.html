@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title >Coches</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let coche of coches">
+      <ion-item lines="inset" button [routerLink]="['/coches',coche.id]">
+        <ion-avatar slot="start">
+          <ion-img [src]="coche.imageURL"></ion-img>
+        </ion-avatar>
+        <ion-label>
+          {{coche.nombre}}
+        </ion-label>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list> 
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addNewCoche()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+
+<app-ejemplo></app-ejemplo>
