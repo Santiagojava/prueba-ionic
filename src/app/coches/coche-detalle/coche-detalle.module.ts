@@ -8,14 +8,15 @@ import { CocheDetallePageRoutingModule } from './coche-detalle-routing.module';
 
 import { CocheDetallePage } from './coche-detalle.page';
 import { ComponentsModule } from 'src/app/components/components.module';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     ComponentsModule,
-    CocheDetallePageRoutingModule
+    CocheDetallePageRoutingModule,
+    FontAwesomeModule
   ],
   declarations: [CocheDetallePage]
 })
